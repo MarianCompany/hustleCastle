@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    cursor: pointer;
 
     &__text {
         font-family: $ui-font-title;
