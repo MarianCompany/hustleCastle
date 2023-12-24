@@ -88,6 +88,10 @@
     }
 
     &_narrow {
+        .scroll__edge-img_xl {
+            display: none;
+        }
+
         @include from($b-tablet) {
             .scroll__content {
                 padding: 50px 40px 40px;

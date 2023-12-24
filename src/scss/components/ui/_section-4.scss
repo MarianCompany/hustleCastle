@@ -99,6 +99,8 @@
     }
 
     &__btn-wrap_xl {
+        display: none;
+
         @include from($b-desktop) {
             display: flex;
         }
@@ -108,8 +110,9 @@
         position: relative;
         width: 390px;
         height: 415px;
-        margin-left: -25px;
         margin-top: -50px;
+        margin-bottom: -5px;
+        z-index: 2;
 
         @include from(440) {
             display: block;
