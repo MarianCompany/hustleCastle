@@ -1,0 +1,80 @@
+.section-1 {
+    height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include from($b-desktop) {
+        height: 1000px;
+    }
+
+    .section__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__title {
+        max-width: 350px;
+        text-align: center;
+
+        @include from($b-desktop) {
+            max-width: 900px;
+        }
+    }
+
+    &__scroll {
+        max-width: 340px;
+
+        @include from($b-desktop) {
+            max-width: none;
+            width: 502px;
+
+            .scroll__content {
+                padding-left: 65px;
+                padding-right: 65px;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+
+        @include from($b-desktop) {
+            gap: 40px;
+        }
+    }
+
+    &__person {
+        display: none;
+        width: 345px;
+        aspect-ratio: 69 / 79;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateX(5%);
+        z-index: 1;
+
+        @include from($b-tablet) {
+            display: inline-block;
+        }
+
+        @include from($b-desktop) {
+            width: 475px;
+            transform: translateX(12%);
+        }
+
+        @include from($b-lg) {
+            width: 545px;
+        }
+
+        @include from($b-xl) {
+            transform: none;
+            right: 60px;
+        }
+    }
+}

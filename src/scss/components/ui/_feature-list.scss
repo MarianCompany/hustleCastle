@@ -1,0 +1,27 @@
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    @include from($b-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    @include from($b-lg) {
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+    }
+
+    @include to($b-lg - 0.1) {
+        &>.feature:nth-child(2n) {
+            justify-self: flex-start;
+        }
+
+        &>.feature:nth-child(2n + 1) {
+            justify-self: flex-end;
+        }
+    }
+}

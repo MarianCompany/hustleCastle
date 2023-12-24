@@ -1,0 +1,58 @@
+.section-2 {
+    background-image: url('/hustleCastle/public/img/blue-section_bg.png');
+    background-size: 1920px auto;
+    background-repeat: repeat-y;
+
+    .section__wrapper {
+        padding-top: 40px;
+        padding-bottom: 80px;
+
+        @include from($b-desktop) {
+            padding-top: 75px;
+        }
+    }
+
+    &__scroll-h {
+        @include to($b-tablet - 0.1) {
+            width: calc(100% + 50px);
+            margin-left: -25px;
+        }
+
+        @include from($b-tablet) {
+            width: 650px;
+            margin: 0 auto;
+        }
+
+        @include from($b-desktop) {
+            width: 800px;
+        }
+    }
+
+    .title__wrap {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        display: inline-block;
+    }
+
+    &__feature-list {
+        margin-top: 25px;
+
+        @include from($b-desktop) {
+            margin-top: 40px;
+        }
+    }
+
+    &__btn-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+
+        @include from($b-desktop) {
+            margin-top: 50px;
+        }
+    }
+}

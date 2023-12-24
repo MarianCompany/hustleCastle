@@ -1,0 +1,21 @@
+.feature {
+    width: 300px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #00788F;
+    border-radius: 15px;
+
+    &__img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .title {
+        text-align: center;
+    }
+}

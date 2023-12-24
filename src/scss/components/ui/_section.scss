@@ -1,0 +1,55 @@
+.section {
+    position: relative;
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+    }
+
+    &__bg-fold-img {
+        width: 90px;
+        height: 80px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &_blue {
+        background-image: url('/hustleCastle/public/img/blue-section_bg.png');
+        background-size: 1920px auto;
+        background-repeat: repeat-y;
+    }
+
+    &_blue:before, &:after {
+        content: '';
+        display: inline-block;
+        width: 20vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+
+        @include from($b-xl) {
+            width: 15vw;
+        }
+    }
+
+    &_blue:before {
+        left: 0;
+        background: linear-gradient(90deg, #00BBCA 0%, rgba(4, 188, 202, 0.00) 100%);
+    }
+
+    &_blue:after {
+        right: 0;
+        background: linear-gradient(-90deg, #00BBCA 0%, rgba(4, 188, 202, 0.00) 100%);
+    }
+}

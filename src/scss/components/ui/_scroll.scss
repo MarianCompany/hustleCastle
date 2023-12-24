@@ -1,0 +1,187 @@
+.scroll {
+    position: relative;
+
+    &__edge {
+        width: calc(100% + 32px);
+        display: flex;
+        margin-left: -16px;
+        margin-bottom: -3px;
+
+        @include from($b-desktop) {
+            width: calc(100% + 46px);
+            margin-left: -23px;
+        }
+    }
+
+    &__edge_down {
+        margin-top: -3px;
+        margin-bottom: 0;
+    }
+
+    &__edge_down &__edge-img {
+        transform: rotate(180deg);
+    }
+
+    &_narrow &__edge_down {
+        width: 108.5%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(75%);
+        margin-left: 0;
+    }
+
+    &_narrow &__edge_down &__edge-img {
+        transform: none;
+    }
+
+    &__edge-img {
+        width: 100%;
+    }
+
+    &__content {
+        padding: 10px 25px;
+        background-image: url('/hustleCastle/public/img/paper-bg.png');
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: repeat-y;
+    }
+
+    &_narrow &__content {
+        padding: 25px 25px 40px;
+        background-image: url('/hustleCastle/public/img/paper-narrow-bg-sm.png');
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    &_xl {
+        @include from($b-tablet) {
+            .scroll__edge {
+                width: calc(100% + 56px);
+                display: flex;
+                margin-left: -28px;
+            }
+
+            .point-list {
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .accordion {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @include from($b-desktop) {
+            .scroll__edge {
+                width: calc(100% + 68px);
+                display: flex;
+                margin-left: -34px;
+            }
+
+            .point-list {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &_narrow {
+        @include from($b-tablet) {
+            .scroll__content {
+                padding: 50px 40px 40px;
+            }
+
+            .point-list {
+                max-width: 340px;
+                margin: 45px auto 0;
+            }
+        }
+
+        @include from($b-desktop) {
+            .scroll__content {
+                padding: 45px 15px 45px;
+                background-image: url('/hustleCastle/public/img/paper-narrow-bg-desktop.png');
+                background-position: center;
+                background-size: 100% 100%;
+            }
+
+            .scroll__edge {
+                display: none;
+            }
+
+            .point-list {
+                max-width: none;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .point {
+                gap: 10px;
+            }
+
+            .point__number-wrap {
+                width: 60px;
+                height: 60px;
+            }
+
+            .point__title {
+                font-size: 24px;
+            }
+        }
+
+        @include from($b-lg) {
+            .point-list {
+                gap: 20px;
+            }
+
+            .point {
+                gap: 20px;
+            }
+
+            .point__number-wrap {
+                width: 70px;
+                height: 70px;
+            }
+
+            .point__title {
+                font-size: 30px;
+            }
+        }
+
+        @include from($b-xl) {
+            .scroll__content {
+                padding: 45px 30px 45px;
+                background-image: url('/hustleCastle/public/img/paper-narrow-bg-xl.png');
+            }
+
+            .point-list {
+                max-width: 1440px;
+                margin-left: auto;
+            }
+
+            .scroll__edge {
+                position: absolute;
+                width: initial;
+                height: 110%;
+                display: block;
+                left: auto;
+                right: 0;
+                bottom: -2px;
+                transform: translateX(75%) scaleX(-1);
+            }
+
+            .scroll__edge-img {
+                display: none;
+            }
+
+            .scroll__edge-img_xl {
+                width: auto;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+}

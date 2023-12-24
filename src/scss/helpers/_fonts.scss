@@ -1,0 +1,40 @@
+@font-face {
+    font-display: swap;
+    font-family: Muller;
+    font-weight: 800;
+    src: url('/hustleCastle/public/fonts/MullerExtraBold.woff2') format('woff2'),
+    url('/hustleCastle/public/fonts/MullerExtraBold.woff') format('woff'),
+    url('/hustleCastle/public/fonts/MullerExtraBold.eot') format('eot'),
+    url('/hustleCastle/public/fonts/MullerExtraBold.ttf') format('ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Muller;
+    font-weight: 900;
+    src: url('/hustleCastle/public/fonts/MullerBlack.woff2') format('woff2'),
+    url('/hustleCastle/public/fonts/MullerBlack.woff') format('woff'),
+    url('/hustleCastle/public/fonts/MullerBlack.eot') format('eot'),
+    url('/hustleCastle/public/fonts/MullerBlack.ttf') format('ttf');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: Gotham;
+    font-weight: 400;
+    src: url('/hustleCastle/public/fonts/Gotham-Book.woff2') format('woff2'),
+    url('/hustleCastle/public/fonts/Gotham-Book.woff') format('woff'),
+    url('/hustleCastle/public/fonts/Gotham-Book.eot') format('eot'),
+    url('/hustleCastle/public/fonts/Gotham-Book.ttf') format('ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Gotham;
+    font-weight: 500;
+    src: url('/hustleCastle/public/fonts/Gotham-Medium.woff2') format('woff2'),
+    url('/hustleCastle/public/fonts/Gotham-Medium.woff') format('woff'),
+    url('/hustleCastle/public/fonts/Gotham-Medium.eot') format('eot'),
+    url('/hustleCastle/public/fonts/Gotham-Medium.ttf') format('ttf');
+}

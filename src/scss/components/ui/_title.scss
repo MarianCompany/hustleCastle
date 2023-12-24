@@ -1,0 +1,68 @@
+.title {
+    font-family: $ui-font-title;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 100%;
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #291F16;
+    text-shadow: -4px 4px 0 #291F16;
+
+    @include from($b-desktop) {
+        font-size: 60px;
+    }
+
+    &_xs {
+        font-size: 24px;
+        -webkit-text-stroke: 1px #291F16;
+        text-shadow: -2px 2px 0 #291F16;
+    }
+
+    &_sm {
+        font-size: 30px;
+        text-shadow: -3px 3px 0 #291F16;
+    }
+
+    &_sm2 {
+        font-size: 40px;
+        text-shadow: -3px 3px 0 #291F16;
+    }
+
+    &_xl {
+        @include from($b-desktop) {
+            font-size: 70px;
+        }
+
+        @include from($b-lg) {
+            font-size: 90px;
+        }
+    }
+
+    &_black {
+        color: #000000;
+    }
+    
+    &_uppercase {
+        text-transform: uppercase;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+
+        @include from($b-desktop) {
+            align-items: center;
+        }
+    }
+
+    &__img {
+        width: 50px;
+        height: 50px;
+
+        @include from($b-desktop) {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}

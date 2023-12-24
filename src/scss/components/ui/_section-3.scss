@@ -1,0 +1,100 @@
+.section-3 {
+    .section__wrapper {
+        padding-top: 40px;
+
+        @include from($b-tablet) {
+            padding-bottom: 355px;
+        }
+
+        @include from($b-desktop) {
+            padding-top: 75px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__scroll {
+        margin-top: 40px;
+    }
+
+    @include to($b-tablet - 0.1) {
+        &__scroll {
+            width: calc(100% + 200px);
+            margin-left: -100px;
+        }
+
+        &__scroll .scroll__content {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+    @include from($b-tablet) {
+        &__scroll {
+            width: 608px;
+            margin: 25px auto 0;
+        }
+    }
+
+    @include from($b-desktop) {
+        &__scroll {
+            width: 750px;
+            margin: 40px auto 0;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 35px;
+    }
+
+    &__disclaimer {
+        max-width: 290px;
+
+        @include from($b-desktop) {
+            max-width: 400px;
+        }
+
+        @include from($b-lg) {
+            max-width: 625px;
+        }
+
+        @include from($b-xl) {
+            max-width: none;
+        }
+    }
+
+    &__person {
+        display: block;
+        width: 345px;
+        height: 320px;
+        margin: 35px auto 0;
+
+        @include from($b-tablet) {
+            width: 510px;
+            height: 470px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateX(-25%);
+        }
+
+        @include from($b-desktop) {
+            width: 500px;
+            height: 465px;
+            transform: translateX(-30%);
+        }
+
+        @include from($b-xl) {
+            width: 550px;
+            height: 510px;
+            transform: translateX(-42%);
+        }
+    }
+}

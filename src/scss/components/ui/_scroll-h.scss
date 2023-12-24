@@ -1,0 +1,74 @@
+.scroll-h {
+    position: relative;
+
+    &__edge {
+        display: none;
+        height: 110%;
+        position: absolute;
+        bottom: 0;
+
+        @include from($b-tablet) {
+            display: block;
+        }
+    }
+
+    &__edge_left {
+        left: 0;
+
+        @include from($b-tablet) {
+            bottom: 2px;
+        }
+
+        @include from($b-desktop) {
+            bottom: 3px;
+        }
+    }
+
+    &__edge_right {
+        right: 0;
+
+        @include from($b-desktop) {
+            bottom: 1px;
+        }
+    }
+
+    &__edge_left &__edge-img {
+        transform: translateX(-70%);
+
+        @include from($b-tablet) {
+            transform: translateX(-45%);
+        }
+
+        @include from($b-desktop) {
+            transform: translateX(-37%);
+        }
+    }
+
+    &__edge_right &__edge-img {
+        transform: translateX(70%) scaleX(-1);
+    }
+
+    &__edge-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        padding: 50px 10px;
+        background-image: url('/hustleCastle/public/img/paper2-bg-sm.png');
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: repeat-y;
+
+        @include from($b-tablet) {
+            padding: 40px 10px;
+            background-image: url('/hustleCastle/public/img/paper2-bg.png');
+        }
+
+        @include from($b-xl) {
+            padding: 50px 10px;
+        }
+    }
+}

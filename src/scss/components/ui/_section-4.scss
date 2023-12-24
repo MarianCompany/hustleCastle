@@ -1,0 +1,138 @@
+.section-4 {
+    .section__wrapper {
+        @include from($b-tablet) {
+            padding-bottom: 275px;
+        }
+
+        @include from($b-desktop) {
+            padding-top: 140px;
+            padding-bottom: 190px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        @include from($b-desktop) {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    }
+
+    &__title_sm {
+        @include from($b-desktop) {
+            display: none;
+        }
+    }
+
+    &__title_xl {
+        display: none;
+
+        @include from($b-desktop) {
+            display: block;
+        }
+    }
+
+    &__scroll {
+        width: calc(100% + 50px);
+        margin-left: -25px;
+
+        @include from(440) {
+            max-width: 390px;
+            margin: 0 auto;
+        }
+
+        @include from($b-tablet) {
+            max-width: none;
+            width: 500px;
+        }
+
+        @include from($b-desktop) {
+            width: 100vw;
+            margin-top: 90px;
+            margin-left: calc((100vw - 1040px) / 2 * -1);
+        }
+
+        @include from($b-lg) {
+            margin-left: calc((100vw - 1240px) / 2 * -1);
+        }
+
+        @include from($b-xl) {
+            width: 92.5vw;
+            margin-left: calc((100vw - 1400px) / 2 * -1);
+        }
+    }
+
+    &__scroll .point-list {
+        margin-top: 30px;
+
+        @include from($b-desktop) {
+            flex-direction: row;
+            gap: 15px;
+        }
+    }
+
+    &__scroll .point-list .point:nth-child(2) {
+        padding-right: 50px;
+
+        @include from($b-desktop) {
+            padding: 0;
+        }
+    }
+
+    &__btn-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        z-index: 1;
+
+        @include from($b-desktop) {
+            margin-top: 100px;
+        }
+    }
+
+    &__btn-wrap_sm {
+        @include from($b-desktop) {
+            display: none;
+        }
+    }
+
+    &__btn-wrap_xl {
+        @include from($b-desktop) {
+            display: flex;
+        }
+    }
+
+    &__person {
+        position: relative;
+        width: 390px;
+        height: 415px;
+        margin-left: -25px;
+        margin-top: -50px;
+
+        @include from(440) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include from($b-tablet) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateX(10%);
+            z-index: 2;
+        }
+
+        @include from($b-desktop) {
+            width: 425px;
+            height: 450px;
+            transform: translateX(15%);
+        }
+
+        @include from($b-lg) {
+            width: 470px;
+            height: 500px;
+        }
+    }
+}

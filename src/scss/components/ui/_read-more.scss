@@ -1,0 +1,32 @@
+.read-more {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    &__text {
+        font-family: $ui-font-title;
+        font-weight: 800;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 100%;
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+
+        @include from($b-lg) {
+            font-size: 18px;
+        }
+    }
+
+    &__img {
+        width: 32px;
+        height: 34px;
+
+        @include from($b-desktop) {
+            width: 48px;
+            height: 52px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.disclaimer {
+    &__text {
+        text-align: center;
+        font-family: $ui-font-text;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        opacity: 0.7;
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+    }
+}

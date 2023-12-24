@@ -1,0 +1,46 @@
+.accordion {
+    &__item {
+        margin-top: 25px;
+
+        @include from($b-tablet) {
+            margin-top: 35px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__item_active &__triangle-wrap {
+        transform: none;
+    }
+
+    &__triangle-wrap {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        transition: transform $ui-transition-time-2;
+    }
+
+    &__triangle {
+        width: 30px;
+        height: 17px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 40px;
+        cursor: pointer;
+    }
+
+    &__content {
+        display: none;
+        margin-top: 10px;
+        padding-left: 70px;
+    }
+}

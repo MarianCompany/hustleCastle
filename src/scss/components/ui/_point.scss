@@ -1,0 +1,30 @@
+.point {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    &_large {
+        align-items: flex-start;
+    }
+
+    &__number-wrap {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-image: url("/hustleCastle/public/img/point-bg.svg");
+        background-size: 100% 100%;
+    }
+
+    &__title {
+        font-family: $ui-font-title;
+        font-weight: 800;
+        font-size: 30px;
+        color: #291F16;
+        line-height: 125%;
+    }
+}

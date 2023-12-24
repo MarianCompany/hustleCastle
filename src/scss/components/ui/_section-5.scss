@@ -1,0 +1,87 @@
+.section-5 {
+    .section__wrapper {
+        padding-top: 60px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__scroll {
+        margin-top: 40px;
+    }
+
+    &__scroll .scroll__content {
+        padding-top: 25px;
+        padding-bottom: 40px;
+    }
+
+    @include to($b-tablet - 0.1) {
+        &__scroll {
+            width: calc(100% + 200px);
+            margin-left: -100px;
+        }
+
+        &__scroll .scroll__content {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+    @include from($b-tablet) {
+        &__scroll {
+            width: 608px;
+            margin: 40px auto 0;
+        }
+    }
+
+    @include from($b-desktop) {
+        &__scroll {
+            height: 750px;
+
+            .scroll__content {
+                height: 100%;
+            }
+
+            .scroll__edge {
+                width: calc(100% + 56px) !important;
+                margin-left: -28px !important;
+            }
+
+            .scroll__edge_down {
+                display: none;
+            }
+        }
+    }
+
+    &__person-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__person {
+        width: 650px;
+        height: 610px;
+
+        @include from($b-desktop) {
+            width: 525px;
+            height: 490px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateX(-45%);
+        }
+
+        @include from($b-lg) {
+            width: 650px;
+            height: 610px;
+            transform: translateX(-42%);
+        }
+
+        @include from($b-xl) {
+            transform: translateX(-25%);
+        }
+    }
+}
